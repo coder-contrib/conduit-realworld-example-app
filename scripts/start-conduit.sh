@@ -5,7 +5,9 @@
 # Create tmux sessions for frontend and backend
 BACKEND_SESSION="conduit-backend"
 FRONTEND_SESSION="conduit-frontend"
-PROJECT_DIR="/home/coder/nexus/conduit-realworld-example-app"
+# Use relative path to work in any environment
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 
 # Kill existing sessions if they exist
 tmux has-session -t "$BACKEND_SESSION" 2>/dev/null && tmux kill-session -t "$BACKEND_SESSION"
