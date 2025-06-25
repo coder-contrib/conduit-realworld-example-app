@@ -3,11 +3,91 @@
   justify-content: center;
 }
 
+/* Purple theme colors */
+:root {
+  --primary-color: #6200ee;
+  --primary-light: #9c64fe;
+  --primary-dark: #3700b3;
+  --accent-color: #bb86fc;
+  --text-on-primary: #ffffff;
+  --text-on-accent: #000000;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: var(--primary-color) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-brand {
+  color: var(--text-on-primary) !important;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: var(--text-on-primary) !important;
+}
+
+/* Button styling */
+.btn-outline-primary {
+  color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-outline-primary:hover {
+  color: var(--text-on-primary) !important;
+  background-color: var(--primary-color) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--text-on-primary) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
+}
+
+/* Links */
+a {
+  color: var(--primary-color) !important;
+}
+
+a:hover {
+  color: var(--primary-dark) !important;
+  text-decoration: underline;
+}
+
+/* Banner */
+.banner {
+  background-color: var(--primary-dark) !important;
+  color: var(--text-on-primary) !important;
+}
+
+/* Tag pill styling */
+.tag-pill {
+  background-color: var(--accent-color) !important;
+  color: var(--text-on-accent) !important;
+}
+
+/* Header */
 header {
   top: 0;
   position: sticky;
   background-color: #fff;
   z-index: 1;
+}
+
+/* Footer */
+.footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 button:focus {

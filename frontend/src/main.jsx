@@ -4,6 +4,7 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import App from "./App";
 import AuthProvider from "./context/AuthContext";
 import "./index.css";
+import "./custom.css"; // Import custom purple theme
 import reportWebVitals from "./reportWebVitals";
 import Article from "./routes/Article/Article";
 import CommentsSection from "./routes/Article/CommentsSection";
