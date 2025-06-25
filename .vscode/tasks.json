@@ -1,0 +1,71 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Conduit Dev Environment",
+      "type": "shell",
+      "command": "${workspaceFolder}/scripts/start-conduit.sh",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "close": false
+      },
+      "isBackground": true,
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Setup Test Data",
+      "type": "shell",
+      "command": "npm run setup",
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Backend Only",
+      "type": "shell",
+      "command": "cd ${workspaceFolder}/backend && npm run dev",
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Frontend Only",
+      "type": "shell",
+      "command": "cd ${workspaceFolder}/frontend && npm run dev",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Tests",
+      "type": "shell",
+      "command": "npm test",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Build Frontend",
+      "type": "shell",
+      "command": "cd ${workspaceFolder}/frontend && npm run build",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Kill All Conduit Tmux Sessions",
+      "type": "shell",
+      "command": "tmux kill-session -t conduit-backend 2>/dev/null || true && tmux kill-session -t conduit-frontend 2>/dev/null || true",
+      "problemMatcher": []
+    },
+    {
+      "label": "Attach to Backend",
+      "type": "shell",
+      "command": "tmux attach -t conduit-backend",
+      "problemMatcher": []
+    },
+    {
+      "label": "Attach to Frontend",
+      "type": "shell",
+      "command": "tmux attach -t conduit-frontend",
+      "problemMatcher": []
+    }
+  ]
+}
