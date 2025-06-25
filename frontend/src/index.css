@@ -3,12 +3,12 @@
   justify-content: center;
 }
 
-/* Purple theme colors */
+/* Green theme colors */
 :root {
-  --primary-color: #6200ee;
-  --primary-light: #9c64fe;
-  --primary-dark: #3700b3;
-  --accent-color: #bb86fc;
+  --primary-color: #00a65a;
+  --primary-light: #5ad190;
+  --primary-dark: #007540;
+  --accent-color: #8bc34a;
   --text-on-primary: #ffffff;
   --text-on-accent: #000000;
 }
